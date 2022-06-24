@@ -1,5 +1,6 @@
 package dev.venomcode.jumpvader;
 
+import dev.venomcode.jumpvader.registers.BlockRegister;
 import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -13,6 +14,6 @@ public class JumpVaderMod implements DedicatedServerModInitializer {
 	@Override
 	public void onInitializeServer()
 	{
-
+		BlockRegister.init();
 	}
 }
