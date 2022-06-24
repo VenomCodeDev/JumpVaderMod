@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "jumpvader",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "JumpVader",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
@@ -14,16 +14,16 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/jumpvader/icon.png",
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
+    "server": [
+      "dev.venomcode.jumpvader.JumpVaderMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "jumpvader.mixins.json"
   ],
 
   "depends": {
