@@ -20,7 +20,7 @@ public class JumpVaderBlock extends Block implements BlockActionListener, BlockS
 {
     public JumpVaderBlock(  )
     {
-        super( FabricBlockSettings.of( Material.STONE ).strength( 4.0F ) );
+        super( FabricBlockSettings.of( Material.GLASS ).strength( 0.3F ) );
     }
 
     @Override
