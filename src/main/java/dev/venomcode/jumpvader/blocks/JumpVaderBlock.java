@@ -2,7 +2,7 @@ package dev.venomcode.jumpvader.blocks;
 
 import dev.venomcode.jumpvader.JumpVaderMod;
 import dev.venomcode.jumpvader.ifaces.BlockActionListener;
-import dev.venomcode.vanillify.api.interfaces.BlockStateProxy;
+import eu.pb4.polymer.api.block.SimplePolymerBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -16,11 +16,12 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 
-public class JumpVaderBlock extends Block implements BlockActionListener, BlockStateProxy
+public class JumpVaderBlock extends SimplePolymerBlock implements BlockActionListener
 {
-    public JumpVaderBlock(  )
+
+    public JumpVaderBlock(Settings settings, Block virtualBlock)
     {
-        super( FabricBlockSettings.of( Material.GLASS ).strength( 0.3F ) );
+        super(settings, virtualBlock);
     }
 
     @Override
@@ -86,21 +87,9 @@ public class JumpVaderBlock extends Block implements BlockActionListener, BlockS
     }
 
     @Override
-    public BlockState getClientBlockState(BlockState blockState )
+    public Block getPolymerBlock(BlockState state)
     {
-        return Blocks.SEA_LANTERN.getDefaultState();
-    }
-
-    @Override
-    public Identifier getIdentifier( )
-    {
-        return new Identifier( JumpVaderMod.MODID, "jumpvader_block" );
-    }
-
-    @Override
-    public String getDisplayName( )
-    {
-        return "JumpVader";
+        return Blocks.ORANGE_STAINED_GLASS;
     }
 
     private static final Identifier _identifier = new Identifier( JumpVaderMod.MODID, "jumpvader_block" );
